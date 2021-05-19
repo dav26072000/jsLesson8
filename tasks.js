@@ -36,3 +36,25 @@ function isPositive(num) {
   }
   return num;
 }
+
+// Task 3
+// Convert the code using try...catch.
+
+// function reverseString(s) {
+// typeof s !== "string"
+// ? console.log("s.split is not a function")
+// : (s = s.split("").reverse().join(""));
+// console.log(s);
+// }
+
+function reverseString(s) {
+  try {
+    if (typeof s !== "string") {
+      throw new Error("s.split is not a function");
+    }
+  } catch (error) {
+    return error.message;
+  }
+  s = s.split("").reverse().join("");
+  return s;
+}
